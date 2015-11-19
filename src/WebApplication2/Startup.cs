@@ -22,7 +22,9 @@ namespace WebApplication2
 {
     public class Startup
     {
-        public IConfigurationRoot Configuration { get; set; }
+        public IConfiguration Configuration { get; private set; }
+
+        public IConfigurationRoot ConfigurationRoot { get; set; }
 
         public Startup(IHostingEnvironment env, IApplicationEnvironment appEnv)
         {
@@ -131,7 +133,7 @@ namespace WebApplication2
             app.UseMvc(routes =>
             {
                 routes.MapRoute(
-                    name: "default",
+                    name: "Default",
                     template: "{controller=Home}/{action=Index}/{id?}");
 
                 // Uncomment the following line to add a route for porting Web API 2 controllers.
