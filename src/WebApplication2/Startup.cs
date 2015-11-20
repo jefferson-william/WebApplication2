@@ -15,6 +15,8 @@ using Microsoft.Dnx.Runtime;
 using Microsoft.Framework.Configuration;
 using Microsoft.Framework.DependencyInjection;
 using Microsoft.Framework.Logging;
+using Microsoft.Data.Entity;
+using WebApplication2.Models;
 
 namespace WebApplication2
 {
@@ -54,6 +56,11 @@ namespace WebApplication2
             // Uncomment the following line to add Web API services which makes it easier to port Web API 2 controllers.
             // You will also need to add the Microsoft.AspNet.Mvc.WebApiCompatShim package to the 'dependencies' section of project.json.
             // services.AddWebApiConventions();
+
+            services
+                .AddEntityFramework()
+                .AddSqlServer()
+                .AddDbContext<MyContext>(options => options.UseSqlServer(Configuration.GetSection("Data:DefaultConnection:ConnectionString").Value));
         }
 
         // Configure is called after ConfigureServices is called.
