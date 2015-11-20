@@ -13,7 +13,8 @@
   </PropertyGroup>
   <PropertyGroup>
     <SchemaVersion>2.0</SchemaVersion>
-    <DevelopmentServerPort>41338</DevelopmentServerPort>
+    <DevelopmentServerPort>5000</DevelopmentServerPort>
+    <IISExpressWindowsAuthentication>Enabled</IISExpressWindowsAuthentication>
   </PropertyGroup>
   <Import Project="$(VSToolsPath)\DNX\Microsoft.DNX.targets" Condition="'$(VSToolsPath)' != ''" />
 </Project>
