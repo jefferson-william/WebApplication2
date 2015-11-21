@@ -10,7 +10,7 @@ namespace WebApplication2.Controllers
     {
         public IActionResult Index()
         {
-            return View();
+            return RedirectToRoute("BlogIndex");
         }
 
         public IActionResult Error()

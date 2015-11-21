@@ -122,9 +122,8 @@ namespace WebApplication2
             // Add MVC to the request pipeline.
             app.UseMvc(routes =>
             {
-                routes.MapRoute(
-                    name: "Default",
-                    template: "{controller=Home}/{action=Index}/{id?}");
+                routes.MapRoute("Default", "{controller=Home}/{action=Index}/{id?}");
+                routes.MapRoute("BlogIndex", "{controller=Blog}/{action=Index}");
 
                 // Uncomment the following line to add a route for porting Web API 2 controllers.
                 routes.MapWebApiRoute("DefaultApi", "api/{controller}/{action}/{id?}");

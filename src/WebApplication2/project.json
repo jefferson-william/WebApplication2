@@ -1,4 +1,4 @@
-﻿{
+{
   "webroot": "wwwroot",
   "userSecretsId": "aspnet5-WebApplication2-e8627cf3-3ef7-4d1e-af1b-f90fb1095299",
   "version": "1.0.0-*",
@@ -11,6 +11,7 @@
   "dependencies": {
     "EntityFramework": "7.0.0-*",
     "EntityFramework.Commands": "7.0.0-beta8",
+    "EntityFramework.Core": "7.0.0-beta8",
     "EntityFramework.SqlServer": "7.0.0-beta8",
     "Microsoft.AspNet.Authentication.Cookies": "1.0.0-beta8",
     "Microsoft.AspNet.Authentication.Facebook": "1.0.0-beta8",

@@ -7,11 +7,11 @@ using WebApplication2.Models;
 
 namespace WebApplication2.Controllers
 {
-    public class BlogsController : Controller
+    public class BlogController : Controller
     {
         private MyContext _context;
 
-        public BlogsController(MyContext context)
+        public BlogController(MyContext context)
         {
             _context = context;
         }
